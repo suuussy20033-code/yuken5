@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>城崎温泉 案内リンク</title>
+
+  <!-- ルート相対パスを明示 -->
+  <base href="./">
+
+  <style>
+    body {
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+
+      /* 背景画像 */
+      background-image: url('背景.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 6px #000;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .qr-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px;
+    }
+
+    .qr-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 250px;
+      width: 100%;
+    }
+
+    .qr-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    .qr-box img {
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .qr-box p {
+      margin-top: 12px;
+      font-size: 18px;
+      color: #333;
+      word-break: break-word;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6em;
+      }
+      .qr-box img {
+        width: 80%;
+      }
+      .qr-box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>城崎温泉 案内リンク</h1>
+
+  <div class="qr-container">
+    <div class="qr-box">
+      <a href="https://kinosaki-spa.gr.jp/directory_cat/restaurant/" target="_blank" rel="noopener noreferrer">
+        <img src="飲食ロゴ.png" alt="城崎温泉 飲食店情報">
+      </a>
+      <p>🍽 飲食店情報</p>
+    </div>
+
+    <div class="qr-box">
+      <a href="https://kinosaki-spa.gr.jp/congestion/" target="_blank" rel="noopener noreferrer">
+        <img src="外湯ロゴ.png" alt="城崎温泉 外湯混雑状況">
+      </a>
+      <p>♨ 外湯混雑状況</p>
+    </div>
+  </div>
+
+</body>
+</html>
